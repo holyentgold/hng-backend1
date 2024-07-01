@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get('/', async (req, res) => {
-    const visitorName = "Mark!";
+app.get('/api/hello', async (req, res) => {
+    const visitor_name = "Mark!";
     const clientIp = "127.0.0.1";
     const temperature = 11;
     const location = "New York";
@@ -10,7 +10,7 @@ app.get('/', async (req, res) => {
     res.json({
         client_ip: clientIp,
         location: location,
-        greeting: `Hello, ${visitorName}, the temperature is ${temperature} degrees Celsius in ${location}`
+        greeting: `Hello, ${visitor_name}, the temperature is ${temperature} degrees Celsius in ${location}`
     });
 });
 
